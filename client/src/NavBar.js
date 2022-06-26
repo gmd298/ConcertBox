@@ -16,11 +16,11 @@ function NavBar({currentUser, setCurrentUser}) {
       <header>
         <button onClick={handleLogout}>Logout</button>
       </header>
-      <Link to="/home" className="site-title"> Concert Box </Link>
+      <Link to="/" className="site-title"> Concert Box </Link>
       <ul>
-        <li>
-          <Link to="/musicians"> Musicians </Link>
-        </li>
+        {/* <li>
+          <Link to="/musician"> Musicians </Link>
+        </li> */}
         <li>
           <Link to="/collection"> Collection </Link>
         </li>
