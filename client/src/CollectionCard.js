@@ -1,14 +1,21 @@
 import React from 'react';
 
-function CollectionCard({ musician, event }){
+function CollectionCard({ event, handleDelete }){
+  const {
+    city,
+    musician: {
+      name,
+    },
+  } = event;
+
   return(
     <li className="card-item">
       <div className="card">
         <div className="card-content">
-          <div className="card-title">{musician.name}</div>
-          <p className="card-details">{event.city}</p>
-          <p className="card-details">{event.created_at}</p>
+          <h2 className="card-title">{name}</h2>
+          <p className="card-details">{city}</p>
         </div>
+        <button type='submit' onClick={handleDelete}>Delete</button>
       </div>
     </li>
   )

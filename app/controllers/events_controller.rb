@@ -5,6 +5,11 @@ class EventsController < ApplicationController
     render json: events
   end
 
+  def create
+    event = Event.create!(event_params)   
+    render json: event, status: :created
+  end
+
   def show
     event = Event.find(params[:id])
     render json: event
@@ -21,5 +26,11 @@ class EventsController < ApplicationController
     event = Event.find(params[:id])
     event.delete.all
     head :no_content 
+  end
+
+  private
+
+  def event_params
+    params.permit(:city, :musician_id, :user_id)
   end
 end
