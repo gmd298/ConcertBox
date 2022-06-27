@@ -50,7 +50,6 @@ function Collection({ user }) {
     .then((response) => response.json())
     .then(() => {
       fetchEvents();
-      fetchMusicians();
     })
 
   return (

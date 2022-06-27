@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.card-item{
+  display: flex;
+  flex-direction: row;
+  border: 1px solid;
+  margin: 5px;
+  padding: 5px;
+  max-width: 25%;
+  flex: 1;
+  color: #000;
+  background-color: aliceblue;
+}
+
+.card-content {
+  justify-content: center;
+}
