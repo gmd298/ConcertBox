@@ -1,12 +1,14 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
-function NavBar({currentUser, setCurrentUser}) {
+function NavBar({user, setUser}) {
+  const navigate = useNavigate();
 
   function handleLogout() {
     fetch("/logout", {method: "DELETE"}).then((r) => {
       if (r.ok) {
-        setCurrentUser(null);
+        setUser({});
+        navigate('/login');
       }
     })
   }

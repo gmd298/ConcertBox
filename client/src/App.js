@@ -8,7 +8,7 @@ import NavBar from "./NavBar";
 import Collection from "./Collection";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState({});
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -27,10 +27,10 @@ function App() {
       <NavBar user={user} setUser={setUser} />
       <Routes>
         <Route path="/" element={ <Home/> } />
-        <Route path="/signup" element={ <Signup onLogin={setUser} /> } />
-        <Route path="/login" element={ <Login onLogin={setUser} /> } />
-        <Route path="/user" element={ <User/> } />
-        <Route path="/collection" element={ <Collection/> } />
+        <Route path="/signup" element={ <Signup setUser={setUser} /> } />
+        <Route path="/login" element={ <Login setUser={setUser} /> } />
+        <Route path="/user" element={ <User user={user} setUser={setUser}/> } />
+        <Route path="/collection" element={ <Collection /> } />
       </Routes>
     </div>
   )

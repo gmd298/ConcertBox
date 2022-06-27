@@ -12,7 +12,7 @@ class EventsController < ApplicationController
 
   def update
     event = Event.find(params[:id])
-    event.update(venue: params[:event][:venue],
+    event.update(venue: params[:event],
       city: params[:event][:city])
       render json: event
   end

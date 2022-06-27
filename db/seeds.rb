@@ -13,13 +13,3 @@ griffin = User.create(
       city: Faker::Nation.capital_city)
     end
 end
-
-# 10.times do
-#   Event.create(
-#     city: Faker::Nation.capital_city)
-#   end
-
-# 10.times do
-#   User.create(
-#     username: Faker::Restaurant::name)
-#   end
