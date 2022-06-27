@@ -42,7 +42,7 @@ function User({user, setUser}) {
 
   return (
     <div>
-        <h1>This is the User page</h1>
+        <h1>This is your user page</h1>
           <div>
             <form onSubmit={handleSubmit}>
               <input type="text" onChange={handleUsernameChange} value={username} />
